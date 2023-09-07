@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: white;
+}
+
+.container {
+  background-color: rgb(246, 231, 212);
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0px 0px 5px black;
+  gap: 0.25em 0.5em;
+  display: grid;
+  grid-template-columns: repeat(96, 1fr);
+  grid-template-rows: repeat(13, 24px);
+  grid-template-areas:
+    'esc esc esc esc . . . . f1 f1 f1 f1 f2 f2 f2 f2 f3 f3 f3 f3 f4 f4 f4 f4 . . f5 f5 f5 f5 f6 f6 f6 f6 f7 f7 f7 f7 f8 f8 f8 f8 . . f9 f9 f9 f9 f10 f10 f10 f10 f11 f11 f11 f11 f12 f12 f12 f12 . . . . print print print print scrll scrll scrll scrll pause pause pause pause . . . . . num-lock num-lock num-lock num-lock num-lock caps-lock caps-lock caps-lock caps-lock caps-lock scroll-lock scroll-lock scroll-lock scroll-lock scroll-lock'
+    'esc esc esc esc . . . . f1 f1 f1 f1 f2 f2 f2 f2 f3 f3 f3 f3 f4 f4 f4 f4 . . f5 f5 f5 f5 f6 f6 f6 f6 f7 f7 f7 f7 f8 f8 f8 f8 . . f9 f9 f9 f9 f10 f10 f10 f10 f11 f11 f11 f11 f12 f12 f12 f12 . . . . print print print print scrll scrll scrll scrll pause pause pause pause . . . . . num-lock num-lock num-lock num-lock num-lock caps-lock caps-lock caps-lock caps-lock caps-lock scroll-lock scroll-lock scroll-lock scroll-lock scroll-lock'
+    '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .'
+    'equivalent equivalent equivalent equivalent sym-1 sym-1 sym-1 sym-1 sym-2 sym-2 sym-2 sym-2 sym-3 sym-3 sym-3 sym-3 sym-4 sym-4 sym-4 sym-4 sym-5 sym-5 sym-5 sym-5 sym-6 sym-6 sym-6 sym-6 sym-7 sym-7 sym-7 sym-7 sym-8 sym-8 sym-8 sym-8 sym-9 sym-9 sym-9 sym-9 sym-0 sym-0 sym-0 sym-0 sym-minus sym-minus sym-minus sym-minus sym-equal sym-equal sym-equal sym-equal sym-vertical sym-vertical sym-vertical sym-vertical backspace backspace backspace backspace . . . . insert insert insert insert home home home home pageUp pageUp pageUp pageUp . . . . numLock numLock numLock numLock numSlash numSlash numSlash numSlash numStar numStar numStar numStar numMinus numMinus numMinus numMinus'
+    'equivalent equivalent equivalent equivalent sym-1 sym-1 sym-1 sym-1 sym-2 sym-2 sym-2 sym-2 sym-3 sym-3 sym-3 sym-3 sym-4 sym-4 sym-4 sym-4 sym-5 sym-5 sym-5 sym-5 sym-6 sym-6 sym-6 sym-6 sym-7 sym-7 sym-7 sym-7 sym-8 sym-8 sym-8 sym-8 sym-9 sym-9 sym-9 sym-9 sym-0 sym-0 sym-0 sym-0 sym-minus sym-minus sym-minus sym-minus sym-equal sym-equal sym-equal sym-equal sym-vertical sym-vertical sym-vertical sym-vertical backspace backspace backspace backspace . . . . insert insert insert insert home home home home pageUp pageUp pageUp pageUp . . . . numLock numLock numLock numLock numSlash numSlash numSlash numSlash numStar numStar numStar numStar numMinus numMinus numMinus numMinus'
+    'tab tab tab tab tab tab key-q key-q key-q key-q key-w key-w key-w key-w key-e key-e key-e key-e key-r key-r key-r key-r key-t key-t key-t key-t key-y key-y key-y key-y key-u key-u key-u key-u key-i key-i key-i key-i key-o key-o key-o key-o key-p key-p key-p key-p open-bracket open-bracket open-bracket open-bracket closed-bracket closed-bracket closed-bracket closed-bracket return return return return return return . . . . delete delete delete delete key-end key-end key-end key-end pageDown pageDown pageDown pageDown . . . . num7 num7 num7 num7 num8 num8 num8 num8 num9 num9 num9 num9 numPlus numPlus numPlus numPlus'
+    'tab tab tab tab tab tab key-q key-q key-q key-q key-w key-w key-w key-w key-e key-e key-e key-e key-r key-r key-r key-r key-t key-t key-t key-t key-y key-y key-y key-y key-u key-u key-u key-u key-i key-i key-i key-i key-o key-o key-o key-o key-p key-p key-p key-p open-bracket open-bracket open-bracket open-bracket closed-bracket closed-bracket closed-bracket closed-bracket return return return return return return . . . . delete delete delete delete key-end key-end key-end key-end pageDown pageDown pageDown pageDown . . . . num7 num7 num7 num7 num8 num8 num8 num8 num9 num9 num9 num9 numPlus numPlus numPlus numPlus'
+    'cLock cLock cLock cLock cLock cLock cLock key-a key-a key-a key-a key-s key-s key-s key-s key-d key-d key-d key-d key-f key-f key-f key-f key-g key-g key-g key-g key-h key-h key-h key-h key-j key-j key-j key-j key-k key-k key-k key-k key-l key-l key-l key-l key-colon key-colon key-colon key-colon key-quotes key-quotes key-quotes key-quotes rtrn rtrn rtrn rtrn rtrn rtrn rtrn rtrn rtrn . . . . . . . . . . . . . . . . . . . . num4 num4 num4 num4 num5 num5 num5 num5 num6 num6 num6 num6 numPlus numPlus numPlus numPlus'
+    'cLock cLock cLock cLock cLock cLock cLock key-a key-a key-a key-a key-s key-s key-s key-s key-d key-d key-d key-d key-f key-f key-f key-f key-g key-g key-g key-g key-h key-h key-h key-h key-j key-j key-j key-j key-k key-k key-k key-k key-l key-l key-l key-l key-colon key-colon key-colon key-colon key-quotes key-quotes key-quotes key-quotes rtrn rtrn rtrn rtrn rtrn rtrn rtrn rtrn rtrn . . . . . . . . . . . . . . . . . . . . num4 num4 num4 num4 num5 num5 num5 num5 num6 num6 num6 num6 numPlus numPlus numPlus numPlus'
+    'lShift lShift lShift lShift lShift lShift lShift lShift lShift key-z key-z key-z key-z key-x key-x key-x key-x key-c key-c key-c key-c key-v key-v key-v key-v key-b key-b key-b key-b key-n key-n key-n key-n key-m key-m key-m key-m lSign lSign lSign lSign gSign gSign gSign gSign qMark qMark qMark qMark rShift rShift rShift rShift rShift rShift rShift rShift rShift rShift rShift . . . . . . . . aUp aUp aUp aUp . . . . . . . . num1 num1 num1 num1 num2 num2 num2 num2 num3 num3 num3 num3 numEnter numEnter numEnter numEnter'
+    'lShift lShift lShift lShift lShift lShift lShift lShift lShift key-z key-z key-z key-z key-x key-x key-x key-x key-c key-c key-c key-c key-v key-v key-v key-v key-b key-b key-b key-b key-n key-n key-n key-n key-m key-m key-m key-m lSign lSign lSign lSign gSign gSign gSign gSign qMark qMark qMark qMark rShift rShift rShift rShift rShift rShift rShift rShift rShift rShift rShift . . . . . . . . aUp aUp aUp aUp . . . . . . . . num1 num1 num1 num1 num2 num2 num2 num2 num3 num3 num3 num3 numEnter numEnter numEnter numEnter'
+    'lCtrl lCtrl lCtrl lCtrl lCtrl lPink lPink lPink lPink alt alt alt alt alt bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace altGr altGr altGr altGr altGr rPink rPink rPink rPink vKey vKey vKey vKey rCtrl rCtrl rCtrl rCtrl rCtrl rCtrl . . . . aLeft aLeft aLeft aLeft aDown aDown aDown aDown aRight aRight aRight aRight . . . . num0 num0 num0 num0 num0 num0 num0 num0 numDel numDel numDel numDel numEnter numEnter numEnter numEnter'
+    'lCtrl lCtrl lCtrl lCtrl lCtrl lPink lPink lPink lPink alt alt alt alt alt bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace bSpace altGr altGr altGr altGr altGr rPink rPink rPink rPink vKey vKey vKey vKey rCtrl rCtrl rCtrl rCtrl rCtrl rCtrl . . . . aLeft aLeft aLeft aLeft aDown aDown aDown aDown aRight aRight aRight aRight . . . . num0 num0 num0 num0 num0 num0 num0 num0 numDel numDel numDel numDel numEnter numEnter numEnter numEnter';
+}
+
+.white-key,
+.f-key,
+.letter,
+.cLock,
+.left-shift,
+.right-shift,
+.left-ctrl,
+.right-ctrl,
+.alt,
+.altGr,
+.arrow,
+.enter,
+.backspace,
+.num-lock,
+.caps-lock,
+.scroll-lock,
+.numLock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.num-lock,
+.caps-lock,
+.scroll-lock,
+.white-key {
+  font-size: 0.8em;
+}
+.bMinus {
+  background-color: black;
+  width: 15px;
+  height: 5px;
+  margin-right: 5px;
+}
+.letter {
+  font-size: 1.5em;
+}
+.num,
+.symbol {
+  padding-left: 5px;
+}
+.num i,
+.numPlus,
+.numWord,
+.symAlign {
+  display: flex;
+}
+.num i {
+  justify-content: center;
+  padding-top: 1em;
+}
+.numPlus {
+  align-items: center;
+}
+.numWord {
+  font-size: 0.8em;
+  padding-top: 1em;
+}
+.symAlign {
+  padding-top: 0.75em;
+}
+.white-key {
+  background-color: white;
+}
+.f-key {
+  background-color: darkgoldenrod;
+  font-size: 1.25em;
+}
+.key {
+  background-color: cadetblue;
+}
+.enter {
+  background-color: lightgreen;
+}
+.left-pink,
+.right-pink {
+  background-color: lightpink;
+}
+.violet-key {
+  background-color: mediumvioletred;
+}
+.arrow {
+  background-color: mediumseagreen;
+}
+.num {
+  background-color: mediumpurple;
+}
+div {
+  border-radius: 5px;
+}
+div div:hover {
+  box-shadow: 0px 0px 5px black;
+}
+.esc {
+  grid-area: esc;
+}
+.f1 {
+  grid-area: f1;
+}
+.f2 {
+  grid-area: f2;
+}
+.f3 {
+  grid-area: f3;
+}
+.f4 {
+  grid-area: f4;
+}
+.f5 {
+  grid-area: f5;
+}
+.f6 {
+  grid-area: f6;
+}
+.f7 {
+  grid-area: f7;
+}
+.f8 {
+  grid-area: f8;
+}
+.f9 {
+  grid-area: f9;
+}
+.f10 {
+  grid-area: f10;
+}
+.f11 {
+  grid-area: f11;
+}
+.f12 {
+  grid-area: f12;
+}
+.print {
+  grid-area: print;
+}
+.scroll {
+  grid-area: scrll;
+}
+.pause {
+  grid-area: pause;
+}
+.num-lock {
+  grid-area: num-lock;
+}
+.caps-lock {
+  grid-area: caps-lock;
+}
+.scroll-lock {
+  grid-area: scroll-lock;
+}
+.symbol-equivalent {
+  grid-area: equivalent;
+}
+.symbol-1 {
+  grid-area: sym-1;
+}
+.symbol-2 {
+  grid-area: sym-2;
+}
+.symbol-3 {
+  grid-area: sym-3;
+}
+.symbol-4 {
+  grid-area: sym-4;
+}
+.symbol-5 {
+  grid-area: sym-5;
+}
+.symbol-6 {
+  grid-area: sym-6;
+}
+.symbol-7 {
+  grid-area: sym-7;
+}
+.symbol-8 {
+  grid-area: sym-8;
+}
+.symbol-9 {
+  grid-area: sym-9;
+}
+.symbol-0 {
+  grid-area: sym-0;
+}
+.symbol-minus {
+  grid-area: sym-minus;
+}
+.symbol-equal {
+  grid-area: sym-equal;
+}
+.symbol-vertical {
+  grid-area: sym-vertical;
+}
+.backspace {
+  grid-area: backspace;
+}
+.insert {
+  grid-area: insert;
+}
+.home {
+  grid-area: home;
+}
+.pageUp {
+  grid-area: pageUp;
+}
+.numLock {
+  grid-area: numLock;
+}
+.numSlash {
+  grid-area: numSlash;
+}
+.numStar {
+  grid-area: numStar;
+}
+.numMinus {
+  grid-area: numMinus;
+}
+.tab {
+  grid-area: tab;
+}
+.Q {
+  grid-area: key-q;
+}
+.W {
+  grid-area: key-w;
+}
+.E {
+  grid-area: key-e;
+}
+.R {
+  grid-area: key-r;
+}
+.T {
+  grid-area: key-t;
+}
+.Y {
+  grid-area: key-y;
+}
+.U {
+  grid-area: key-u;
+}
+.I {
+  grid-area: key-i;
+}
+.O {
+  grid-area: key-o;
+}
+.P {
+  grid-area: key-p;
+}
+.open-bracket {
+  grid-area: open-bracket;
+}
+.closed-bracket {
+  grid-area: closed-bracket;
+}
+.return {
+  grid-area: return;
+  margin-bottom: -0.5em;
+}
+.rtrn {
+  grid-area: rtrn;
+}
+.delete {
+  grid-area: delete;
+}
+.end {
+  grid-area: key-end;
+}
+.pageDown {
+  grid-area: pageDown;
+}
+.numSeven {
+  grid-area: num7;
+}
+.numEight {
+  grid-area: num8;
+}
+.numNine {
+  grid-area: num9;
+}
+.numPlus {
+  grid-area: numPlus;
+}
+.cLock {
+  grid-area: cLock;
+}
+.A {
+  grid-area: key-a;
+}
+.S {
+  grid-area: key-s;
+}
+.D {
+  grid-area: key-d;
+}
+.F {
+  grid-area: key-f;
+}
+.G {
+  grid-area: key-g;
+}
+.H {
+  grid-area: key-h;
+}
+.J {
+  grid-area: key-j;
+}
+.K {
+  grid-area: key-k;
+}
+.L {
+  grid-area: key-l;
+}
+.colon {
+  grid-area: key-colon;
+}
+.quotes {
+  grid-area: key-quotes;
+}
+.numFour {
+  grid-area: num4;
+}
+.numFive {
+  grid-area: num5;
+}
+.numSix {
+  grid-area: num6;
+}
+.left-shift {
+  grid-area: lShift;
+}
+.Z {
+  grid-area: key-z;
+}
+.X {
+  grid-area: key-x;
+}
+.C {
+  grid-area: key-c;
+}
+.V {
+  grid-area: key-v;
+}
+.B {
+  grid-area: key-b;
+}
+.N {
+  grid-area: key-n;
+}
+.M {
+  grid-area: key-m;
+}
+.less-sign {
+  grid-area: lSign;
+}
+.greater-sign {
+  grid-area: gSign;
+}
+.question-mark {
+  grid-area: qMark;
+}
+.right-shift {
+  grid-area: rShift;
+}
+.up {
+  grid-area: aUp;
+}
+.numOne {
+  grid-area: num1;
+}
+.numTwo {
+  grid-area: num2;
+}
+.numThree {
+  grid-area: num3;
+}
+.numEnter {
+  grid-area: numEnter;
+}
+.left-ctrl {
+  grid-area: lCtrl;
+}
+.left-pink {
+  grid-area: lPink;
+}
+.alt {
+  grid-area: alt;
+}
+.space {
+  grid-area: bSpace;
+}
+.altGr {
+  grid-area: altGr;
+}
+.right-pink {
+  grid-area: rPink;
+}
+.violet-key {
+  grid-area: vKey;
+}
+.right-ctrl {
+  grid-area: rCtrl;
+}
+.left {
+  grid-area: aLeft;
+}
+.down {
+  grid-area: aDown;
+}
+.right {
+  grid-area: aRight;
+}
+.numZero {
+  grid-area: num0;
+}
+.numDel {
+  grid-area: numDel;
+}
